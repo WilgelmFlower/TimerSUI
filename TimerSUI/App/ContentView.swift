@@ -1,16 +1,10 @@
-//
-//  ContentView.swift
-//  TimerSUI
-//
-//  Created by Mark Wilhelm on 01.09.2022.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var pomodoroModel: PomodoroModel
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HomeScreen()
+            .environmentObject(pomodoroModel)
     }
 }
 
